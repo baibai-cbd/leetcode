@@ -1,5 +1,8 @@
 package com.white;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -131,22 +134,35 @@ public class Main {
 //
 //        System.out.println(c1 == c2);
 
-        TreeNode root = new TreeNode(4);
-        //TreeNode t1 = new TreeNode(1);
-        TreeNode t2 = new TreeNode(1);
-        //TreeNode t3 = new TreeNode(0);
-        TreeNode t4 = new TreeNode(3);
-        //TreeNode t5 = new TreeNode(7);
-        //root.left = t1;
-        root.left =t2;
-        //t1.left=t3;
-        t2.right=t4;
-        //t2.right=t5;
+        TreeNode root = new TreeNode(3);
+        TreeNode t1 = new TreeNode(9);
+        TreeNode t2 = new TreeNode(20);
+        TreeNode t3 = new TreeNode(15);
+        TreeNode t4 = new TreeNode(7);
+        root.left = t1;
+        root.right = t2;
+        t2.left = t3;
+        t2.right = t4;
+//
+//        MinimumAbsoluteDifferenceinBST min = new MinimumAbsoluteDifferenceinBST();
+//        int a = min.getMinimumDifference(root);
+//
+//        System.out.println(a);
 
-        MinimumAbsoluteDifferenceinBST min = new MinimumAbsoluteDifferenceinBST();
-        int a = min.getMinimumDifference(root);
+//        String s = "able0000";
+//        System.out.println(ToLowerCase.toLowerCase(s));
 
-        System.out.println(a);
+//        int[][] grid = {{2}};
+//
+//        int i = SurfaceArea3DShapes.surfaceArea(grid);
+//
+//        System.out.println(i);
+
+        List<Double> arrayList = AverageOfLevelsInBinaryTree.averageOfLevels(root);
+        for (Double d: arrayList) {
+            System.out.println(d.doubleValue());
+        }
+
     }
 
 //    public static void location(Map<String,Integer> m) {
