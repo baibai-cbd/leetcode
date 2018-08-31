@@ -1,6 +1,7 @@
 package com.white;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -158,11 +159,23 @@ public class Main {
 //
 //        System.out.println(i);
 
-        List<Double> arrayList = AverageOfLevelsInBinaryTree.averageOfLevels(root);
-        for (Double d: arrayList) {
-            System.out.println(d.doubleValue());
-        }
+//        List<Double> arrayList = AverageOfLevelsInBinaryTree.averageOfLevels(root);
+//        for (Double d: arrayList) {
+//            System.out.println(d.doubleValue());
+//        }
 
+//        String[] words = {"gin","zen","gig","msg"};
+//
+//        int i = UniqueMorseCodeWords.uniqueMorseRepresentations(words);
+//        System.out.println(i);
+
+        int[][] input = {{1,1,0,0},{1,0,0,1},{0,1,1,1},{1,0,1,0}};
+
+        int[][] result = FlippingAnImage.flipAndInvertImage(input);
+
+        for (int[] a: result) {
+            System.out.println(Arrays.toString(a));
+        }
     }
 
 //    public static void location(Map<String,Integer> m) {
