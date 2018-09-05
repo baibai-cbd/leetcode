@@ -169,13 +169,31 @@ public class Main {
 //        int i = UniqueMorseCodeWords.uniqueMorseRepresentations(words);
 //        System.out.println(i);
 
-        int[][] input = {{1,1,0,0},{1,0,0,1},{0,1,1,1},{1,0,1,0}};
+//        int[][] input = {{1,1,0,0},{1,0,0,1},{0,1,1,1},{1,0,1,0}};
+//
+//        int[][] result = FlippingAnImage.flipAndInvertImage(input);
+//
+//        for (int[] a: result) {
+//            System.out.println(Arrays.toString(a));
+//        }
 
-        int[][] result = FlippingAnImage.flipAndInvertImage(input);
+        ListNode l1 = new ListNode(2);
+        ListNode l2 = new ListNode(4);
+        ListNode l3 = new ListNode(3);
+        ListNode l4 = new ListNode(5);
+        ListNode l5 = new ListNode(6);
+        ListNode l6 = new ListNode(4);
+        l1.next = l2;
+        l2.next = l3;
+        l4.next = l5;
+        l5.next = l6;
 
-        for (int[] a: result) {
-            System.out.println(Arrays.toString(a));
+        ListNode r = AddTwoNumbers.addTwoNumbers(l1,l4);
+        while (r.next!=null) {
+            System.out.println(r.val);
+            r = r.next;
         }
+        System.out.println(r.val);
     }
 
 //    public static void location(Map<String,Integer> m) {
