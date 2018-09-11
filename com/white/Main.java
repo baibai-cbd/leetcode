@@ -177,23 +177,32 @@ public class Main {
 //            System.out.println(Arrays.toString(a));
 //        }
 
-        ListNode l1 = new ListNode(2);
-        ListNode l2 = new ListNode(4);
-        ListNode l3 = new ListNode(3);
-        ListNode l4 = new ListNode(5);
-        ListNode l5 = new ListNode(6);
-        ListNode l6 = new ListNode(4);
-        l1.next = l2;
-        l2.next = l3;
-        l4.next = l5;
-        l5.next = l6;
+//        ListNode l1 = new ListNode(2);
+//        ListNode l2 = new ListNode(4);
+//        ListNode l3 = new ListNode(3);
+//        ListNode l4 = new ListNode(5);
+//        ListNode l5 = new ListNode(6);
+//        ListNode l6 = new ListNode(4);
+//        l1.next = l2;
+//        l2.next = l3;
+//        l4.next = l5;
+//        l5.next = l6;
+//
+//        ListNode r = AddTwoNumbers.addTwoNumbers(l1,l4);
+//        while (r.next!=null) {
+//            System.out.println(r.val);
+//            r = r.next;
+//        }
+//        System.out.println(r.val);
 
-        ListNode r = AddTwoNumbers.addTwoNumbers(l1,l4);
-        while (r.next!=null) {
-            System.out.println(r.val);
-            r = r.next;
-        }
-        System.out.println(r.val);
+//        int i = LongestSubStringWithoutRepeatingCharacters.lengthOfLongestSubstring("");
+//        System.out.println(i);
+        //
+
+        int[] nums1 = {22};
+        int[] nums2 = {5,6};
+        double s = MedianOfTwoSortedArrays.findMedianSortedArrays(nums1,nums2);
+        System.out.println(s);
     }
 
 //    public static void location(Map<String,Integer> m) {
