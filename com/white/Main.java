@@ -199,8 +199,8 @@ public class Main {
 //        System.out.println(i);
         //
 
-        int[] nums1 = {22};
-        int[] nums2 = {5,6};
+        int[] nums2 = {2};
+        int[] nums1 = {1,3};
         double s = MedianOfTwoSortedArrays.findMedianSortedArrays(nums1,nums2);
         System.out.println(s);
     }
