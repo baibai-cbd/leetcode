@@ -199,10 +199,13 @@ public class Main {
 //        System.out.println(i);
         //
 
-        int[] nums2 = {2};
-        int[] nums1 = {1,3};
-        double s = MedianOfTwoSortedArrays.findMedianSortedArrays(nums1,nums2);
-        System.out.println(s);
+//        int[] nums2 = {2};
+//        int[] nums1 = {1,3};
+//        double s = MedianOfTwoSortedArrays.findMedianSortedArrays(nums1,nums2);
+//        System.out.println(s);
+
+        String t = "abcda";
+        System.out.println(LongestPalindromicSubstring.longestPalindrome(t));
     }
 
 //    public static void location(Map<String,Integer> m) {
