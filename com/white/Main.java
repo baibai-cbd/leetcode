@@ -1,9 +1,5 @@
 package com.white;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -135,15 +131,15 @@ public class Main {
 //
 //        System.out.println(c1 == c2);
 
-        TreeNode root = new TreeNode(3);
-        TreeNode t1 = new TreeNode(9);
-        TreeNode t2 = new TreeNode(20);
-        TreeNode t3 = new TreeNode(15);
-        TreeNode t4 = new TreeNode(7);
-        root.left = t1;
-        root.right = t2;
-        t2.left = t3;
-        t2.right = t4;
+        // TreeNode root = new TreeNode(3);
+        // TreeNode t1 = new TreeNode(9);
+        // TreeNode t2 = new TreeNode(20);
+        // TreeNode t3 = new TreeNode(15);
+        // TreeNode t4 = new TreeNode(7);
+        // root.left = t1;
+        // root.right = t2;
+        // t2.left = t3;
+        // t2.right = t4;
 //
 //        MinimumAbsoluteDifferenceinBST min = new MinimumAbsoluteDifferenceinBST();
 //        int a = min.getMinimumDifference(root);
@@ -204,8 +200,8 @@ public class Main {
 //        double s = MedianOfTwoSortedArrays.findMedianSortedArrays(nums1,nums2);
 //        System.out.println(s);
 
-        String t = "abcda";
-        System.out.println(LongestPalindromicSubstring.longestPalindrome(t));
+        String t = "PAYPALISHIRING";
+        System.out.println(ZigzagConversion.convert(t, 3));
     }
 
 //    public static void location(Map<String,Integer> m) {
@@ -213,15 +209,15 @@ public class Main {
 //    }
 
 
-    public static boolean abc(int t) {
-        if (t<3) {
-            return false;
-        } else if (t>3) {
-            return true;
-        } else {
-            return true;
-        }
-    }
+//     public static boolean abc(int t) {
+//         if (t<3) {
+//             return false;
+//         } else if (t>3) {
+//             return true;
+//         } else {
+//             return true;
+//         }
+//     }
 
 
 

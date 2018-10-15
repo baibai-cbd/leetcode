@@ -1,9 +1,5 @@
 package com.white;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Set;
-
 public class SecondMinimumNodeinaBinaryTree {
 
     // 671. Second Minimum Node in a Binary Tree

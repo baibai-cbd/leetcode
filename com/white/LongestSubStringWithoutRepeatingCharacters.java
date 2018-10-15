@@ -1,8 +1,5 @@
 package com.white;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class LongestSubStringWithoutRepeatingCharacters {
 
     // problem 3
