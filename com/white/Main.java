@@ -200,8 +200,17 @@ public class Main {
 //        double s = MedianOfTwoSortedArrays.findMedianSortedArrays(nums1,nums2);
 //        System.out.println(s);
 
-        String t = "PAYPALISHIRING";
-        System.out.println(ZigzagConversion.convert(t, 3));
+        // String t = "PAYPALISHIRING";
+        // System.out.println(ZigzagConversion.convert(t, 3));
+
+        int a = -3643;
+        int b = 0;
+        int c = 1234;
+        int d = 2147000647;
+        System.out.println(ReverseInteger.reverse(a));
+        System.out.println(ReverseInteger.reverse(b));
+        System.out.println(ReverseInteger.reverse(c));
+        System.out.println(ReverseInteger.reverse(d));
     }
 
 //    public static void location(Map<String,Integer> m) {
