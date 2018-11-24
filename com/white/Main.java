@@ -213,19 +213,29 @@ public class Main {
 //        System.out.println(ReverseInteger.reverse(d));
     	
     	ListNode a1 = new ListNode(1);
-    	ListNode a2 = new ListNode(2);
-    	ListNode a3 = new ListNode(3);
-    	ListNode a4 = new ListNode(4);
-    	ListNode a5 = new ListNode(5);
+    	ListNode a2 = new ListNode(1);
+    	ListNode a3 = new ListNode(2);
+    	ListNode a4 = new ListNode(3);
+    	ListNode a5 = new ListNode(4);
+    	ListNode a6 = new ListNode(4);
+    	ListNode a7 = new ListNode(5);
+    	ListNode a8 = new ListNode(6);
     	
-    	a1.next = a2;
-    	a2.next = a3;
-    	a3.next = a4;
-    	a4.next = a5;
+    	a1.next = a5;
+    	a5.next = a7;
+    	//
+    	a2.next = a4;
+    	a4.next = a6;
+    	//
+    	a3.next = a8;
     	
-    	ListNode result = RemoveNthNodeFromEndOfList.removeNthFromEnd(a1, 1);
+    	ListNode[] nodes = {a1, a2, a3};
+    	
+//    	ListNode result = RemoveNthNodeFromEndOfList.removeNthFromEnd(a1, 1);
+//    	ListNode.printListNode(result);
+    	
+    	ListNode result = MergeKSortedLists.mergeKLists(nodes);
     	ListNode.printListNode(result);
-    	
     }
 
 //    public static void location(Map<String,Integer> m) {
