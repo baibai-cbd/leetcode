@@ -221,38 +221,21 @@ public class Main {
     	ListNode a7 = new ListNode(5);
     	ListNode a8 = new ListNode(6);
     	
-    	a1.next = a5;
+    	a1.next = a3; 
+    	a3.next = a4;
+    	a4.next = a5;
     	a5.next = a7;
-    	//
-    	a2.next = a4;
-    	a4.next = a6;
-    	//
-    	a3.next = a8;
+    	a7.next = a8;
     	
     	ListNode[] nodes = {a1, a2, a3};
     	
 //    	ListNode result = RemoveNthNodeFromEndOfList.removeNthFromEnd(a1, 1);
 //    	ListNode.printListNode(result);
     	
-    	ListNode result = MergeKSortedLists.mergeKLists(nodes);
+//    	ListNode result = MergeKSortedLists.mergeKLists(nodes);
+//    	ListNode.printListNode(result);
+    	
+    	ListNode result = ReverseNodesInKGroup.reverseKGroup(a1, 5);
     	ListNode.printListNode(result);
     }
-
-//    public static void location(Map<String,Integer> m) {
-//        HashMap<String,Integer> hm = new HashMap<>(m);
-//    }
-
-
-//     public static boolean abc(int t) {
-//         if (t<3) {
-//             return false;
-//         } else if (t>3) {
-//             return true;
-//         } else {
-//             return true;
-//         }
-//     }
-
-
-
 }
