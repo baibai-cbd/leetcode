@@ -235,7 +235,10 @@ public class Main {
 //    	ListNode result = MergeKSortedLists.mergeKLists(nodes);
 //    	ListNode.printListNode(result);
     	
-    	ListNode result = ReverseNodesInKGroup.reverseKGroup(a1, 5);
+//    	ListNode result = ReverseNodesInKGroup.reverseKGroup(a1, 5);
+//    	ListNode.printListNode(result);
+    	
+    	ListNode result = RotateList.rotateRight(a1, 10);
     	ListNode.printListNode(result);
     }
 }
