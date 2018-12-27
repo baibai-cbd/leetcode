@@ -215,11 +215,11 @@ public class Main {
     	ListNode a1 = new ListNode(1);
 //    	ListNode a2 = new ListNode(1);
     	ListNode a3 = new ListNode(1);
-    	ListNode a4 = new ListNode(4);
+    	ListNode a4 = new ListNode(1);
     	ListNode a5 = new ListNode(2);
 //    	ListNode a6 = new ListNode(4);
-    	ListNode a7 = new ListNode(3);
-    	ListNode a8 = new ListNode(4);
+    	ListNode a7 = new ListNode(2);
+    	ListNode a8 = new ListNode(2);
     	
     	a1.next = a3; 
     	a3.next = a4;
@@ -241,8 +241,10 @@ public class Main {
 //    	ListNode result = RotateList.rotateRight(a1, 10);
 //    	ListNode.printListNode(result);
     	
-    	ListNode result = RemoveDuplicatesFromSortedListII.deleteDuplicates(a1);
-    	ListNode.printListNode(result);
+//    	ListNode result = RemoveDuplicatesFromSortedListII.deleteDuplicates(a1);
+//    	ListNode.printListNode(result);
     	
+    	ListNode result = RemoveDuplicatesFromSortedList.deleteDuplicates(a1);
+    	ListNode.printListNode(result);
     }
 }
