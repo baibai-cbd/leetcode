@@ -214,12 +214,12 @@ public class Main {
     	
     	ListNode a1 = new ListNode(1);
 //    	ListNode a2 = new ListNode(1);
-    	ListNode a3 = new ListNode(4);
-    	ListNode a4 = new ListNode(3);
-    	ListNode a5 = new ListNode(2);
-    	ListNode a6 = new ListNode(4);
-    	ListNode a7 = new ListNode(5);
-    	ListNode a8 = new ListNode(2);
+    	ListNode a3 = new ListNode(3);
+    	ListNode a4 = new ListNode(4);
+    	ListNode a5 = new ListNode(5);
+//    	ListNode a6 = new ListNode(4);
+    	ListNode a7 = new ListNode(7);
+    	ListNode a8 = new ListNode(8);
     	
     	a1.next = a3; 
     	a3.next = a4;
@@ -247,7 +247,10 @@ public class Main {
 //    	ListNode result = RemoveDuplicatesFromSortedList.deleteDuplicates(a1);
 //    	ListNode.printListNode(result);
     	
-    	ListNode result = PartitionList.partition(a1,1);
+//    	ListNode result = PartitionList.partition(a1,1);
+//    	ListNode.printListNode(result);
+    	
+    	ListNode result = ReverseLinkedListII.reverseBetween(a8, 1, 2);
     	ListNode.printListNode(result);
     }
 }
