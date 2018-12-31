@@ -226,6 +226,8 @@ public class Main {
     	a4.next = a5;
     	a5.next = a7;
     	a7.next = a8;
+    	//
+    	a8.next = a8;
     	
 //    	ListNode[] nodes = {a1, a2, a3};
     	
@@ -250,7 +252,10 @@ public class Main {
 //    	ListNode result = PartitionList.partition(a1,1);
 //    	ListNode.printListNode(result);
     	
-    	ListNode result = ReverseLinkedListII.reverseBetween(a8, 1, 2);
-    	ListNode.printListNode(result);
+//    	ListNode result = ReverseLinkedListII.reverseBetween(a8, 1, 2);
+//    	ListNode.printListNode(result);
+    	
+    	ListNode result = LinkedListCycleII.detectCycle(a1);
+    	System.out.println(result.val);
     }
 }
