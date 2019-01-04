@@ -261,7 +261,11 @@ public class Main {
 //    	ListNode result = LinkedListCycleII.detectCycle(a1);
 //    	System.out.println(result.val);
     	
-    	List<Integer> result = BinaryTreeInorderTraversal.inorderTraversal(root);
-    	System.out.println(result.toString());
+//    	List<Integer> result = BinaryTreeInorderTraversal.inorderTraversal(root);
+//    	System.out.println(result.toString());
+    	
+    	int[] heights = {9,1,1,1,1};
+    	int a = LargestRectangleInHistogram.largestRectangleArea(heights);
+    	System.out.println(a);
     }
 }
