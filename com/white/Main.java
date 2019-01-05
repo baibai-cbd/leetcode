@@ -134,15 +134,19 @@ public class Main {
 //
 //        System.out.println(c1 == c2);
 
-         TreeNode root = new TreeNode(1);
-         TreeNode t1 = new TreeNode(2);
-         TreeNode t2 = new TreeNode(3);
-         TreeNode t3 = new TreeNode(4);
-         TreeNode t4 = new TreeNode(5);
+         TreeNode root = new TreeNode(3);
+         TreeNode t1 = new TreeNode(9);
+         TreeNode t2 = new TreeNode(20);
+         TreeNode t3 = new TreeNode(10);
+         TreeNode t4 = new TreeNode(7);
+         TreeNode t5 = new TreeNode(15);
+         
          root.left = t1;
          root.right = t2;
          t1.left = t3;
-         t1.right = t4;
+         t2.left = t5;
+         t2.right = t4;
+         
 //
 //        MinimumAbsoluteDifferenceinBST min = new MinimumAbsoluteDifferenceinBST();
 //        int a = min.getMinimumDifference(root);
@@ -264,8 +268,13 @@ public class Main {
 //    	List<Integer> result = BinaryTreeInorderTraversal.inorderTraversal(root);
 //    	System.out.println(result.toString());
     	
-    	int[] heights = {9,1,1,1,1};
-    	int a = LargestRectangleInHistogram.largestRectangleArea(heights);
-    	System.out.println(a);
+//    	int[] heights = {9,1,1,1,1};
+//    	int a = LargestRectangleInHistogram.largestRectangleArea(heights);
+//    	System.out.println(a);
+    	
+    	List<List<Integer>> list = BinaryTreeZigzagLevelOrderTraversal.zigzagLevelOrder(t2);
+    	for (List<Integer> list2 : list) {
+			System.out.println(list2.toString());
+		}
     }
 }
