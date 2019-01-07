@@ -272,9 +272,15 @@ public class Main {
 //    	int a = LargestRectangleInHistogram.largestRectangleArea(heights);
 //    	System.out.println(a);
     	
-    	List<List<Integer>> list = BinaryTreeZigzagLevelOrderTraversal.zigzagLevelOrder(t2);
-    	for (List<Integer> list2 : list) {
-			System.out.println(list2.toString());
-		}
+//    	List<List<Integer>> list = BinaryTreeZigzagLevelOrderTraversal.zigzagLevelOrder(t2);
+//    	for (List<Integer> list2 : list) {
+//			System.out.println(list2.toString());
+//		}
+    	
+//    	List<Integer> result = BinaryTreePreorderTraversal.preorderTraversal(root);
+//    	System.out.println(result.toString());
+    	
+    	List<Integer> result = BinaryTreePostorderTraversal.postorderTraversal(root);
+    	System.out.println(result.toString());
     }
 }
