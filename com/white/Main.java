@@ -280,7 +280,11 @@ public class Main {
 //    	List<Integer> result = BinaryTreePreorderTraversal.preorderTraversal(root);
 //    	System.out.println(result.toString());
     	
-    	List<Integer> result = BinaryTreePostorderTraversal.postorderTraversal(root);
-    	System.out.println(result.toString());
+//    	List<Integer> result = BinaryTreePostorderTraversal.postorderTraversal(root);
+//    	System.out.println(result.toString());
+    	
+    	String[] notations = {"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"};
+    	int result = EvaluateReversePolishNotation.evalRPN(notations);
+    	System.out.println(result);
     }
 }
