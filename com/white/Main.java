@@ -134,11 +134,11 @@ public class Main {
 //
 //        System.out.println(c1 == c2);
 
-         TreeNode root = new TreeNode(3);
-         TreeNode t1 = new TreeNode(9);
-         TreeNode t2 = new TreeNode(20);
+         TreeNode root = new TreeNode(13);
+         TreeNode t1 = new TreeNode(11);
+         TreeNode t2 = new TreeNode(16);
          TreeNode t3 = new TreeNode(10);
-         TreeNode t4 = new TreeNode(7);
+         TreeNode t4 = new TreeNode(17);
          TreeNode t5 = new TreeNode(15);
          
          root.left = t1;
@@ -283,8 +283,23 @@ public class Main {
 //    	List<Integer> result = BinaryTreePostorderTraversal.postorderTraversal(root);
 //    	System.out.println(result.toString());
     	
-    	String[] notations = {"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"};
-    	int result = EvaluateReversePolishNotation.evalRPN(notations);
-    	System.out.println(result);
+//    	String[] notations = {"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"};
+//    	int result = EvaluateReversePolishNotation.evalRPN(notations);
+//    	System.out.println(result);
+    	
+    	BSTIterator bstIterator = new BSTIterator(root);
+    	System.out.println(bstIterator.hasNext());
+    	System.out.println(bstIterator.next());
+    	System.out.println(bstIterator.hasNext());
+    	System.out.println(bstIterator.next());
+    	System.out.println(bstIterator.hasNext());
+    	System.out.println(bstIterator.next());
+    	System.out.println(bstIterator.hasNext());
+    	System.out.println(bstIterator.next());
+    	System.out.println(bstIterator.hasNext());
+    	System.out.println(bstIterator.next());
+    	System.out.println(bstIterator.hasNext());
+    	System.out.println(bstIterator.next());
+    	System.out.println(bstIterator.hasNext());
     }
 }
