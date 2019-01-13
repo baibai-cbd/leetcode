@@ -287,19 +287,24 @@ public class Main {
 //    	int result = EvaluateReversePolishNotation.evalRPN(notations);
 //    	System.out.println(result);
     	
-    	BSTIterator bstIterator = new BSTIterator(root);
-    	System.out.println(bstIterator.hasNext());
-    	System.out.println(bstIterator.next());
-    	System.out.println(bstIterator.hasNext());
-    	System.out.println(bstIterator.next());
-    	System.out.println(bstIterator.hasNext());
-    	System.out.println(bstIterator.next());
-    	System.out.println(bstIterator.hasNext());
-    	System.out.println(bstIterator.next());
-    	System.out.println(bstIterator.hasNext());
-    	System.out.println(bstIterator.next());
-    	System.out.println(bstIterator.hasNext());
-    	System.out.println(bstIterator.next());
-    	System.out.println(bstIterator.hasNext());
+//    	BSTIterator bstIterator = new BSTIterator(root);
+//    	System.out.println(bstIterator.hasNext());
+//    	System.out.println(bstIterator.next());
+//    	System.out.println(bstIterator.hasNext());
+//    	System.out.println(bstIterator.next());
+//    	System.out.println(bstIterator.hasNext());
+//    	System.out.println(bstIterator.next());
+//    	System.out.println(bstIterator.hasNext());
+//    	System.out.println(bstIterator.next());
+//    	System.out.println(bstIterator.hasNext());
+//    	System.out.println(bstIterator.next());
+//    	System.out.println(bstIterator.hasNext());
+//    	System.out.println(bstIterator.next());
+//    	System.out.println(bstIterator.hasNext());
+    	
+    	
+    	String a = "(3-(5-(8)-(2+(9-(0-(8-(2))))-(4))-(4)))";
+    	int r = BasicCalculator.calculate(a);
+    	System.out.println(r);
     }
 }
