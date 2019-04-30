@@ -303,8 +303,22 @@ public class Main {
 //    	System.out.println(bstIterator.hasNext());
     	
     	
-    	String a = "(3-(5-(8)-(2+(9-(0-(8-(2))))-(4))-(4)))";
-    	int r = BasicCalculator.calculate(a);
-    	System.out.println(r);
+//    	String a = "(3-(5-(8)-(2+(9-(0-(8-(2))))-(4))-(4)))";
+//    	int r = BasicCalculator.calculate(a);
+//    	System.out.println(r);
+    	
+    	
+    	String a = "+11232312257";
+    	String b = "   -a    ";
+    	String c = "    ";
+    	String d = "1237567321323";
+    	String e = "321a123";
+    	String f = "-431287686878678";
+    	System.out.println(a +" --> " + StringToIntegerATOI.myAtoi(a));
+    	System.out.println(b +" --> " + StringToIntegerATOI.myAtoi(b));
+    	System.out.println(c +" --> " + StringToIntegerATOI.myAtoi(c));
+    	System.out.println(d +" --> " + StringToIntegerATOI.myAtoi(d));
+    	System.out.println(e +" --> " + StringToIntegerATOI.myAtoi(e));
+    	System.out.println(f +" --> " + StringToIntegerATOI.myAtoi(f));
     }
 }
