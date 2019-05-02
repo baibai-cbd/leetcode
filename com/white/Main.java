@@ -308,17 +308,27 @@ public class Main {
 //    	System.out.println(r);
     	
     	
-    	String a = "+11232312257";
-    	String b = "   -a    ";
-    	String c = "    ";
-    	String d = "1237567321323";
-    	String e = "321a123";
-    	String f = "-431287686878678";
-    	System.out.println(a +" --> " + StringToIntegerATOI.myAtoi(a));
-    	System.out.println(b +" --> " + StringToIntegerATOI.myAtoi(b));
-    	System.out.println(c +" --> " + StringToIntegerATOI.myAtoi(c));
-    	System.out.println(d +" --> " + StringToIntegerATOI.myAtoi(d));
-    	System.out.println(e +" --> " + StringToIntegerATOI.myAtoi(e));
-    	System.out.println(f +" --> " + StringToIntegerATOI.myAtoi(f));
+//    	String a = "+11232312257";
+//    	String b = "   -a    ";
+//    	String c = "    ";
+//    	String d = "1237567321323";
+//    	String e = "321a123";
+//    	String f = "-431287686878678";
+//    	System.out.println(a +" --> " + StringToIntegerATOI.myAtoi(a));
+//    	System.out.println(b +" --> " + StringToIntegerATOI.myAtoi(b));
+//    	System.out.println(c +" --> " + StringToIntegerATOI.myAtoi(c));
+//    	System.out.println(d +" --> " + StringToIntegerATOI.myAtoi(d));
+//    	System.out.println(e +" --> " + StringToIntegerATOI.myAtoi(e));
+//    	System.out.println(f +" --> " + StringToIntegerATOI.myAtoi(f));
+    	
+    	
+    	int a = 10;
+    	int b = -101;
+    	int c = 1233210;
+    	int d = 54345;
+    	System.out.println(a + " --> " + PalindromeNumber.isPalindrome(a));
+    	System.out.println(b + " --> " + PalindromeNumber.isPalindrome(b));
+    	System.out.println(c + " --> " + PalindromeNumber.isPalindrome(c));
+    	System.out.println(d + " --> " + PalindromeNumber.isPalindrome(d));
     }
 }
