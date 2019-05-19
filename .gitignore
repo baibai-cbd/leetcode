@@ -2,3 +2,11 @@
 *.classpath
 *.project
 *.json
+
+.vs/*
+*.sln
+leetcodeCSharp/bin/*
+leetcodeCSharp/obj/*
+leetcodeCSharp/Properties/*
+leetcodeCSharp/App.config
+leetcodeCSharp/leetcodeCSharp.csproj
