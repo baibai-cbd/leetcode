@@ -18,6 +18,18 @@ public class RegularExpressionMatching {
 
     public static boolean isMatch(String s, String p) {
         
+        if (p.isEmpty()) {
+            if (s.isEmpty()) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        
+        if (p.contains("**") || p.charAt(0)=='*') {
+            return false;
+        }
+
         char[] charArr = p.toCharArray();
         ArrayList<kvp> kvps = new ArrayList<>();
 
@@ -29,21 +41,41 @@ public class RegularExpressionMatching {
             }
         }
 
+        if (s.isEmpty()) {
+            for (kvp var : kvps) {
+                if (!var.isMany) {
+                    return false;
+                }
+            }
+        }
+
         int trackIndex = 0;
         int kvpIndex = -1;
         outerloop:
         for (kvp var : kvps) {
             kvpIndex++;
             if (var.isMany) {
-                while(s.charAt(trackIndex)==var.a) {
-                    trackIndex++;
-                    if (trackIndex==s.length()) {
-                        break outerloop;
+                if (var.a=='.') {
+                    char temp = s.charAt(trackIndex);
+                    while(s.charAt(trackIndex)==temp) {
+                        trackIndex++;
+                        if (trackIndex==s.length()) {
+                            break outerloop;
+                        }
+                    }
+                } else {
+                    while(s.charAt(trackIndex)==var.a) {
+                        trackIndex++;
+                        if (trackIndex==s.length()) {
+                            break outerloop;
+                        }
                     }
                 }
             } else {
-                if (s.charAt(trackIndex)!=var.a) {
-                    return false;
+                if (var.a!='.') {
+                    if (s.charAt(trackIndex)!=var.a) {
+                        return false;
+                    }
                 }
                 trackIndex++;
                 if (trackIndex==s.length()) {
