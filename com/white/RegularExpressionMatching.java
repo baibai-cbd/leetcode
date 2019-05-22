@@ -1,20 +1,8 @@
 package com.white;
 
-import java.util.ArrayList;
-
 public class RegularExpressionMatching {
 
     //  10. Regular Expression Matching
-
-    private static class kvp{
-        char a;
-        boolean isMany;
-
-        private kvp(char c, boolean isMany) {
-            this.a = c;
-            this.isMany = isMany;
-        }
-    }
 
     public static boolean isMatch(String s, String p) {
         
@@ -26,75 +14,30 @@ public class RegularExpressionMatching {
             }
         }
         
-        if (p.contains("**") || p.charAt(0)=='*') {
-            return false;
-        }
+        boolean[][] dpArr = new boolean[s.length()+1][p.length()+1];
 
-        char[] charArr = p.toCharArray();
-        ArrayList<kvp> kvps = new ArrayList<>();
+        dpArr[0][0] = true;
 
-        for (int i = 0; i < charArr.length; i++) {
-            if (charArr[i]!='*') {
-                kvps.add(new kvp(charArr[i], false));
-            } else {
-                kvps.get(kvps.size()-1).isMany = true;
+        for (int i = 1; i < dpArr[0].length; i++) {
+            if (p.charAt(i-1)=='*') {
+                dpArr[0][i] = dpArr[0][i-2];
             }
         }
 
-        if (s.isEmpty()) {
-            for (kvp var : kvps) {
-                if (!var.isMany) {
-                    return false;
-                }
-            }
-        }
-
-        int trackIndex = 0;
-        int kvpIndex = -1;
-        outerloop:
-        for (kvp var : kvps) {
-            kvpIndex++;
-            if (var.isMany) {
-                if (var.a=='.') {
-                    char temp = s.charAt(trackIndex);
-                    while(s.charAt(trackIndex)==temp) {
-                        trackIndex++;
-                        if (trackIndex==s.length()) {
-                            break outerloop;
-                        }
+        for (int i = 1; i < dpArr.length; i++) {
+            for (int j = 1; j < dpArr[0].length; j++) {
+                if (p.charAt(j-1)=='.' || p.charAt(j-1)==s.charAt(i-1)) {
+                    dpArr[i][j] = dpArr[i-1][j-1];
+                } else if (p.charAt(j-1)=='*') {
+                    dpArr[i][j] = dpArr[i][j-2];
+                    if (p.charAt(j-2)=='.' || p.charAt(j-2)==s.charAt(i-1)) {
+                        dpArr[i][j] = dpArr[i][j] || dpArr[i-1][j];
                     }
                 } else {
-                    while(s.charAt(trackIndex)==var.a) {
-                        trackIndex++;
-                        if (trackIndex==s.length()) {
-                            break outerloop;
-                        }
-                    }
-                }
-            } else {
-                if (var.a!='.') {
-                    if (s.charAt(trackIndex)!=var.a) {
-                        return false;
-                    }
-                }
-                trackIndex++;
-                if (trackIndex==s.length()) {
-                    break outerloop;
+                    dpArr[i][j] = false;
                 }
             }
         }
-
-        if (trackIndex < s.length()) {
-            return false;
-        }
-        if (kvpIndex < kvps.size()-1) {
-            for (int i=kvpIndex+1; i<kvps.size(); i++) {
-                if (!kvps.get(i).isMany) {
-                    return false;
-                }
-            }
-        }
-        
-        return true;
+        return dpArr[s.length()][p.length()];
     }
 }
