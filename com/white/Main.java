@@ -322,13 +322,17 @@ public class Main {
 //    	System.out.println(f +" --> " + StringToIntegerATOI.myAtoi(f));
     	
     	
-    	int a = 10;
-    	int b = -101;
-    	int c = 1233210;
-    	int d = 54345;
-    	System.out.println(a + " --> " + PalindromeNumber.isPalindrome(a));
-    	System.out.println(b + " --> " + PalindromeNumber.isPalindrome(b));
-    	System.out.println(c + " --> " + PalindromeNumber.isPalindrome(c));
-    	System.out.println(d + " --> " + PalindromeNumber.isPalindrome(d));
+    	// int a = 10;
+    	// int b = -101;
+    	// int c = 1233210;
+    	// int d = 54345;
+    	// System.out.println(a + " --> " + PalindromeNumber.isPalindrome(a));
+    	// System.out.println(b + " --> " + PalindromeNumber.isPalindrome(b));
+    	// System.out.println(c + " --> " + PalindromeNumber.isPalindrome(c));
+        // System.out.println(d + " --> " + PalindromeNumber.isPalindrome(d));
+        
+        int b = 1994;
+        String r = IntegerToRoman.intToRoman(b);
+        System.out.println(r);
     }
 }
