@@ -331,8 +331,12 @@ public class Main {
     	// System.out.println(c + " --> " + PalindromeNumber.isPalindrome(c));
         // System.out.println(d + " --> " + PalindromeNumber.isPalindrome(d));
         
-        int b = 1994;
-        String r = IntegerToRoman.intToRoman(b);
+        // int b = 1994;
+        // String r = IntegerToRoman.intToRoman(b);
+        // System.out.println(r);
+
+        String a = "MMXIX";
+        int r = RomanToInteger.romanToInt(a);
         System.out.println(r);
     }
 }
