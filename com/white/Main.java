@@ -335,8 +335,16 @@ public class Main {
         // String r = IntegerToRoman.intToRoman(b);
         // System.out.println(r);
 
-        String a = "MMXIX";
-        int r = RomanToInteger.romanToInt(a);
-        System.out.println(r);
+        // String a = "MMXIX";
+        // int r = RomanToInteger.romanToInt(a);
+        // System.out.println(r);
+
+        String[] strs = new String[0];
+        //strs[0] = "flower";
+        //strs[1] = "flow";
+        //strs[2] = "";
+
+        String result = LongestCommonPrefix.longestCommonPrefix(strs);
+        System.out.println(result.length() + " --- " + result);
     }
 }
