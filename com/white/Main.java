@@ -339,12 +339,16 @@ public class Main {
         // int r = RomanToInteger.romanToInt(a);
         // System.out.println(r);
 
-        String[] strs = new String[0];
+        //String[] strs = new String[0];
         //strs[0] = "flower";
         //strs[1] = "flow";
         //strs[2] = "";
 
-        String result = LongestCommonPrefix.longestCommonPrefix(strs);
-        System.out.println(result.length() + " --- " + result);
+        //String result = LongestCommonPrefix.longestCommonPrefix(strs);
+        //System.out.println(result.length() + " --- " + result);
+
+        int[] a = new int[]{20,30,10,5};
+
+        int r = ThreeSumClosest.threeSumClosest(a, 5);
     }
 }
