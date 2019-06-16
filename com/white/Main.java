@@ -347,8 +347,10 @@ public class Main {
         //String result = LongestCommonPrefix.longestCommonPrefix(strs);
         //System.out.println(result.length() + " --- " + result);
 
-        int[] a = new int[]{20,30,10,5};
-
-        int r = ThreeSumClosest.threeSumClosest(a, 5);
+        String a = "5";
+        List<String> list = LetterCombinationsOfAPhoneNumber.letterCombinations(a);
+        for (String var : list) {
+            System.out.println(var);
+        }
     }
 }
