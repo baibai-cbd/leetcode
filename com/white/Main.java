@@ -347,10 +347,12 @@ public class Main {
         //String result = LongestCommonPrefix.longestCommonPrefix(strs);
         //System.out.println(result.length() + " --- " + result);
 
-        String a = "5";
-        List<String> list = LetterCombinationsOfAPhoneNumber.letterCombinations(a);
-        for (String var : list) {
-            System.out.println(var);
-        }
+        // String a = "5";
+        // List<String> list = LetterCombinationsOfAPhoneNumber.letterCombinations(a);
+        // for (String var : list) {
+        //     System.out.println(var);
+        // }
+
+        List<String> r = GenerateParentheses.generateParenthesis(3);
     }
 }
