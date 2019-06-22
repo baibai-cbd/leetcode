@@ -219,22 +219,21 @@ public class Main {
 //        System.out.println(ReverseInteger.reverse(c));
 //        System.out.println(ReverseInteger.reverse(d));
     	
-    	ListNode a1 = new ListNode(1);
-//    	ListNode a2 = new ListNode(1);
-    	ListNode a3 = new ListNode(3);
-    	ListNode a4 = new ListNode(4);
-    	ListNode a5 = new ListNode(5);
-//    	ListNode a6 = new ListNode(4);
-    	ListNode a7 = new ListNode(7);
-    	ListNode a8 = new ListNode(8);
+//      ListNode a1 = new ListNode(1);
+//     	ListNode a2 = new ListNode(1);
+//     	ListNode a3 = new ListNode(3);
+//     	ListNode a4 = new ListNode(4);
+//     	ListNode a5 = new ListNode(5);
+//      ListNode a6 = new ListNode(4);
+//     	ListNode a7 = new ListNode(7);
+//     	ListNode a8 = new ListNode(8);
     	
-    	a1.next = a3; 
-    	a3.next = a4;
-    	a4.next = a5;
-    	a5.next = a7;
-    	a7.next = a8;
-    	//
-    	a8.next = a8;
+//     	a1.next = a3; 
+//     	a3.next = a4;
+//     	a4.next = a5;
+//     	a5.next = a7;
+//     	a7.next = a8;
+//     	a8.next = a8;
     	
 //    	ListNode[] nodes = {a1, a2, a3};
     	
@@ -353,6 +352,20 @@ public class Main {
         //     System.out.println(var);
         // }
 
-        List<String> r = GenerateParentheses.generateParenthesis(3);
+        //List<String> r = GenerateParentheses.generateParenthesis(3);
+
+        ListNode a1 = new ListNode(1);
+    	ListNode a2 = new ListNode(2);
+    	ListNode a3 = new ListNode(3);
+    	ListNode a4 = new ListNode(4);
+        ListNode a5 = new ListNode(5);
+        
+        //a1.next = a2;
+        //a2.next = a3;
+        //a3.next = a4;
+        //a4.next = a5;
+
+        ListNode result = SwapNodesInPairs.swapPairs(a1);
+        ListNode.printListNode(result);
     }
 }
