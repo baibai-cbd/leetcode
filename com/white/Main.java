@@ -365,7 +365,14 @@ public class Main {
         //a3.next = a4;
         //a4.next = a5;
 
-        ListNode result = SwapNodesInPairs.swapPairs(a1);
-        ListNode.printListNode(result);
+        //ListNode result = SwapNodesInPairs.swapPairs(a1);
+        //ListNode.printListNode(result);
+
+        int[] a = new int[] {1,1,2};
+        int r = RemoveDuplicatesFromSortedArray.removeDuplicates(a);
+        System.out.println(r);
+        for (int var : a) {
+            System.out.print(var + "--");
+        }
     }
 }
