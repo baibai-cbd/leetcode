@@ -368,10 +368,17 @@ public class Main {
         //ListNode result = SwapNodesInPairs.swapPairs(a1);
         //ListNode.printListNode(result);
 
-        int[] a = new int[] {1,1,2};
-        int r = RemoveDuplicatesFromSortedArray.removeDuplicates(a);
+        // int[] a = new int[] {1,1,2};
+        // int r = RemoveDuplicatesFromSortedArray.removeDuplicates(a);
+        // System.out.println(r);
+        // for (int var : a) {
+        //     System.out.print(var + "--");
+        // }
+
+        int[] arr = new int[] {3,2,2,3};
+        int r = RemoveElement.removeElement(arr, 3);
         System.out.println(r);
-        for (int var : a) {
+        for (int var : arr) {
             System.out.print(var + "--");
         }
     }
