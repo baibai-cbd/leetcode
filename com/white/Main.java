@@ -354,11 +354,11 @@ public class Main {
 
         //List<String> r = GenerateParentheses.generateParenthesis(3);
 
-        ListNode a1 = new ListNode(1);
-    	ListNode a2 = new ListNode(2);
-    	ListNode a3 = new ListNode(3);
-    	ListNode a4 = new ListNode(4);
-        ListNode a5 = new ListNode(5);
+        // ListNode a1 = new ListNode(1);
+    	// ListNode a2 = new ListNode(2);
+    	// ListNode a3 = new ListNode(3);
+    	// ListNode a4 = new ListNode(4);
+        // ListNode a5 = new ListNode(5);
         
         //a1.next = a2;
         //a2.next = a3;
@@ -375,11 +375,16 @@ public class Main {
         //     System.out.print(var + "--");
         // }
 
-        int[] arr = new int[] {3,2,2,3};
-        int r = RemoveElement.removeElement(arr, 3);
+        // int[] arr = new int[] {3,2,2,3};
+        // int r = RemoveElement.removeElement(arr, 3);
+        // System.out.println(r);
+        // for (int var : arr) {
+        //     System.out.print(var + "--");
+        // }
+
+        String h = "asdasfaewadsdawdbfgb909pp";
+        String n = "";
+        int r = ImplementStrStr.strStr(h, n);
         System.out.println(r);
-        for (int var : arr) {
-            System.out.print(var + "--");
-        }
     }
 }
