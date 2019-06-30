@@ -7,6 +7,11 @@ public class ImplementStrStr {
     // try using KMP & Boyer-Moore next time
     public static int strStr(String haystack, String needle) {
         
+        return bruteForceMethod(haystack, needle);
+    }
+
+    private static int bruteForceMethod(String haystack, String needle) {
+        
         if (needle.isEmpty()) {
             return 0;
         }
@@ -29,4 +34,5 @@ public class ImplementStrStr {
         }
         return -1;
     }
+
 }

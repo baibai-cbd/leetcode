@@ -382,9 +382,18 @@ public class Main {
         //     System.out.print(var + "--");
         // }
 
-        String h = "asdasfaewadsdawdbfgb909pp";
-        String n = "";
-        int r = ImplementStrStr.strStr(h, n);
+        // String h = "asdasfaewadsdawdbfgb909pp";
+        // String n = "";
+        // int r = ImplementStrStr.strStr(h, n);
+        // System.out.println(r);
+
+        int a = -2147483648;
+        int b = 1;
+        int c = -1 << 31;
+        int d = c << 1;
+        int e = 1;
+        int f = e << 32;
+        int r = DivideTwoIntegers.divide(a, b);
         System.out.println(r);
     }
 }
