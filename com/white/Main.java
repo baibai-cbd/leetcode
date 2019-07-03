@@ -387,13 +387,22 @@ public class Main {
         // int r = ImplementStrStr.strStr(h, n);
         // System.out.println(r);
 
-        int a = -2147483648;
-        int b = 1;
-        int c = -1 << 31;
-        int d = c << 1;
-        int e = 1;
-        int f = e << 32;
-        int r = DivideTwoIntegers.divide(a, b);
-        System.out.println(r);
+        // int a = -2147483648;
+        // int b = 1;
+        // int c = -1 << 31 << 1;
+        // int d = c << 1;
+        // int e = -1;
+        // int f = 3 << 31;
+        // int r = DivideTwoIntegers.divide(a, b);
+        // System.out.println(c);
+        // System.out.println(f);
+
+        String s = "wordgoodgoodwordgoodbestword";
+        String[] words = new String[] {"word","good","best","word"};
+        List<Integer> r = SubstringWithConcatenationOfAllWords.findSubstring(s, words);
+        for (int i : r) {
+            System.out.println(i);
+        }
+        
     }
 }
