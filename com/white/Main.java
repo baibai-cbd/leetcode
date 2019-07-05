@@ -397,12 +397,18 @@ public class Main {
         // System.out.println(c);
         // System.out.println(f);
 
-        String s = "wordgoodgoodwordgoodbestword";
-        String[] words = new String[] {"word","good","best","word"};
-        List<Integer> r = SubstringWithConcatenationOfAllWords.findSubstring(s, words);
-        for (int i : r) {
-            System.out.println(i);
+        // String s = "wordgoodgoodwordgoodbestword";
+        // String[] words = new String[] {"word","good","best","word"};
+        // List<Integer> r = SubstringWithConcatenationOfAllWords.findSubstring(s, words);
+        // for (int i : r) {
+        //     System.out.println(i);
+        // }
+
+        int[] arr = new int[] {4,3,2,1};
+        NextPermutation.nextPermutation(arr);
+
+        for (int var : arr) {
+            System.out.print("-"+ var +"-");
         }
-        
     }
 }
