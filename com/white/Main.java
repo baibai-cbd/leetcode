@@ -404,11 +404,20 @@ public class Main {
         //     System.out.println(i);
         // }
 
-        int[] arr = new int[] {4,3,2,1};
-        NextPermutation.nextPermutation(arr);
+        // int[] arr = new int[] {4,3,2,1};
+        // NextPermutation.nextPermutation(arr);
 
-        for (int var : arr) {
-            System.out.print("-"+ var +"-");
-        }
+        // for (int var : arr) {
+        //     System.out.print("-"+ var +"-");
+        // }
+
+        String a = "(()";
+        String b = ")()())";
+        String c = "((()))";
+        String d = "))))(((((";
+        String e = "((()))())";
+        
+        int r = LongestValidParentheses.longestValidParentheses(e);
+        System.out.println(r);
     }
 }
