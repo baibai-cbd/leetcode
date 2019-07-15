@@ -134,18 +134,18 @@ public class Main {
 //
 //        System.out.println(c1 == c2);
 
-         TreeNode root = new TreeNode(13);
-         TreeNode t1 = new TreeNode(11);
-         TreeNode t2 = new TreeNode(16);
-         TreeNode t3 = new TreeNode(10);
-         TreeNode t4 = new TreeNode(17);
-         TreeNode t5 = new TreeNode(15);
+         TreeNode root = new TreeNode(1);
+         TreeNode t1 = new TreeNode(2);
+         TreeNode t2 = new TreeNode(3);
+         TreeNode t3 = new TreeNode(4);
+         TreeNode t4 = new TreeNode(5);
+         TreeNode t5 = new TreeNode(6);
          
          root.left = t1;
          root.right = t2;
          t1.left = t3;
+         t1.right = t4;
          t2.left = t5;
-         t2.right = t4;
          
 //
 //        MinimumAbsoluteDifferenceinBST min = new MinimumAbsoluteDifferenceinBST();
@@ -411,13 +411,16 @@ public class Main {
         //     System.out.print("-"+ var +"-");
         // }
 
-        String a = "(()";
-        String b = ")()())";
-        String c = "((()))";
-        String d = "))))(((((";
-        String e = "((()))())";
+        // String a = "(()";
+        // String b = ")()())";
+        // String c = "((()))";
+        // String d = "))))(((((";
+        // String e = "((()))())";
         
-        int r = LongestValidParentheses.longestValidParentheses(e);
+        // int r = LongestValidParentheses.longestValidParentheses(e);
+        // System.out.println(r);
+
+        int r = CountCompleteTreeNodes.countNodes(root);
         System.out.println(r);
     }
 }
