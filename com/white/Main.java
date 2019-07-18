@@ -411,13 +411,20 @@ public class Main {
         //     System.out.print("-"+ var +"-");
         // }
 
-        String a = "(()";
-        String b = ")()())";
-        String c = "((()))";
-        String d = "))))(((((";
-        String e = "((()))())";
+        // String a = "(()";
+        // String b = ")()())";
+        // String c = "((()))";
+        // String d = "))))(((((";
+        // String e = "((()))())";
         
-        int r = LongestValidParentheses.longestValidParentheses(e);
-        System.out.println(r);
+        // int r = LongestValidParentheses.longestValidParentheses(e);
+        // System.out.println(r);
+
+        int[] arr = new int[] {5,7,7,8,8,10};
+        FindFirstLastPositionInSortedArray f = new FindFirstLastPositionInSortedArray();
+        int[] r = f.searchRange(arr, 6);
+        for (int i : r) {
+            System.out.println(i);
+        }
     }
 }
