@@ -423,13 +423,15 @@ public class Main {
         // int r = CountCompleteTreeNodes.countNodes(root);
         // System.out.println(r);
 
-        int[] arr = new int[] {5,7,7,8,8,10};
-        FindFirstLastPositionInSortedArray f = new FindFirstLastPositionInSortedArray();
-        int[] r = f.searchRange(arr, 6);
-        for (int i : r) {
-            System.out.println(i);
-        }
+        // int[] arr = new int[] {5,7,7,8,8,10};
+        // FindFirstLastPositionInSortedArray f = new FindFirstLastPositionInSortedArray();
+        // int[] r = f.searchRange(arr, 6);
+        // for (int i : r) {
+        //     System.out.println(i);
+        // }
 
-
+        int[] arr = new int[] {5,6,7,8,9,11};
+        int result = SearchInsertPosition.searchInsert(arr, 12);
+        System.out.println(result);
     }
 }
