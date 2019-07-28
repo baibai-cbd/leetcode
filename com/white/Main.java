@@ -430,8 +430,13 @@ public class Main {
         //     System.out.println(i);
         // }
 
-        int[] arr = new int[] {5,6,7,8,9,11};
-        int result = SearchInsertPosition.searchInsert(arr, 12);
-        System.out.println(result);
+        // int[] arr = new int[] {5,6,7,8,9,11};
+        // int result = SearchInsertPosition.searchInsert(arr, 12);
+        // System.out.println(result);
+
+        String s = "abbbta";
+        String t = "cdddvc";
+        boolean r = IsomorphicStrings.isIsomorphic(s, t);
+        System.out.println(r);
     }
 }
