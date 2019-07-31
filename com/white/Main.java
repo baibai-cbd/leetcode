@@ -434,9 +434,13 @@ public class Main {
         // int result = SearchInsertPosition.searchInsert(arr, 12);
         // System.out.println(result);
 
-        String s = "abbbta";
-        String t = "cdddvc";
-        boolean r = IsomorphicStrings.isIsomorphic(s, t);
+        // String s = "abbbta";
+        // String t = "cdddvc";
+        // boolean r = IsomorphicStrings.isIsomorphic(s, t);
+        // System.out.println(r);
+
+        int i = 9;
+        String r = CountAndSay.countAndSay(i);
         System.out.println(r);
     }
 }
