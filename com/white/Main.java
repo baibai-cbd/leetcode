@@ -439,8 +439,13 @@ public class Main {
         // boolean r = IsomorphicStrings.isIsomorphic(s, t);
         // System.out.println(r);
 
-        int i = 9;
-        String r = CountAndSay.countAndSay(i);
-        System.out.println(r);
+        // int i = 9;
+        // String r = CountAndSay.countAndSay(i);
+        // System.out.println(r);
+
+        int[] candidates = new int[] {2,1};
+        int target = 3;
+        List<List<Integer>> lists = CombinationSum.combinationSum(candidates, target);
+        System.out.println(lists.isEmpty());
     }
 }
