@@ -1,5 +1,10 @@
 *.class
 *.json
+*.classpath
+*.project
+*.iml
+*.code-workspace
+
 
 packages/
 .vs/*
