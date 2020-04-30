@@ -14,10 +14,8 @@ leetcodeCSharp/obj/*
 leetcodeCSharp/Properties/*
 leetcodeCSharp/App.config
 leetcodeCSharp/packages.config
-leetcodeCSharp/leetcodeCSharp.csproj
 
 leetcodeCSharp.UnitTest/bin/*
 leetcodeCSharp.UnitTest/obj/*
 leetcodeCSharp.UnitTest/Properties/*
 leetcodeCSharp.UnitTest/packages.config
-leetcodeCSharp.UnitTest/leetcodeCSharp.UnitTest.csproj
