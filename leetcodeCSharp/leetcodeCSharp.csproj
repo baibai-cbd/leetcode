@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FirstUnique.cs" />
     <Compile Include="GroupAnagrams.cs" />
     <Compile Include="MiddleOfTheLinkedList.cs" />
     <Compile Include="PalindromeNumber.cs" />
