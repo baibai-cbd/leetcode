@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="FirstUnique.cs" />
     <Compile Include="GroupAnagrams.cs" />
+    <Compile Include="HappyNumber.cs" />
     <Compile Include="LastStoneWeight.cs" />
     <Compile Include="MiddleOfTheLinkedList.cs" />
     <Compile Include="PalindromeNumber.cs" />
