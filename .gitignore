@@ -4,6 +4,7 @@
 *.project
 *.iml
 *.code-workspace
+*.user
 
 
 packages/
