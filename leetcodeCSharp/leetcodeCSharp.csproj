@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BestTimeToBuyAndSellStockII.cs" />
     <Compile Include="FirstUnique.cs" />
     <Compile Include="FirstUniqueCharacterInAString.cs" />
     <Compile Include="GroupAnagrams.cs" />
