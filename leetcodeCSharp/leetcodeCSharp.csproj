@@ -51,6 +51,7 @@
     <Compile Include="GroupAnagrams.cs" />
     <Compile Include="HappyNumber.cs" />
     <Compile Include="LastStoneWeight.cs" />
+    <Compile Include="MajorityElement.cs" />
     <Compile Include="MaximumSubarray.cs" />
     <Compile Include="MiddleOfTheLinkedList.cs" />
     <Compile Include="NumberComplement.cs" />
