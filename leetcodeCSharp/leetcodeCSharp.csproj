@@ -47,6 +47,7 @@
     <Compile Include="BestTimeToBuyAndSellStockII.cs" />
     <Compile Include="CheckIfItIsAStraightLine.cs" />
     <Compile Include="CousinsInBinaryTree.cs" />
+    <Compile Include="FindAllAnagramsInAString.cs" />
     <Compile Include="FindTheTownJudge.cs" />
     <Compile Include="FirstBadVersion.cs" />
     <Compile Include="FirstUnique.cs" />
