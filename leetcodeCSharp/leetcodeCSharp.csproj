@@ -56,6 +56,7 @@
     <Compile Include="GroupAnagrams.cs" />
     <Compile Include="HappyNumber.cs" />
     <Compile Include="ImplementTrie.cs" />
+    <Compile Include="IntervalListIntersections.cs" />
     <Compile Include="LastStoneWeight.cs" />
     <Compile Include="MajorityElement.cs" />
     <Compile Include="MaximumSubarray.cs" />
