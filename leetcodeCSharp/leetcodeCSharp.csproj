@@ -63,6 +63,7 @@
     <Compile Include="MiddleOfTheLinkedList.cs" />
     <Compile Include="NumberComplement.cs" />
     <Compile Include="OddEvenLinkedList.cs" />
+    <Compile Include="OnlineStockSpan.cs" />
     <Compile Include="PalindromeNumber.cs" />
     <Compile Include="PermutationInString.cs" />
     <Compile Include="ProductExceptSelf.cs" />
