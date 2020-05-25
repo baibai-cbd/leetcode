@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="BestTimeToBuyAndSellStockII.cs" />
     <Compile Include="CheckIfItIsAStraightLine.cs" />
+    <Compile Include="ConstructBinarySearchTreeFromPreorderTraversal.cs" />
     <Compile Include="CousinsInBinaryTree.cs" />
     <Compile Include="FindAllAnagramsInAString.cs" />
     <Compile Include="FindTheTownJudge.cs" />
