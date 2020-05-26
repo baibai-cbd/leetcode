@@ -71,6 +71,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SingleElementInASortedArray.cs" />
+    <Compile Include="UncrossedLines.cs" />
     <Compile Include="ValidPerfectSquare.cs" />
   </ItemGroup>
   <ItemGroup>
