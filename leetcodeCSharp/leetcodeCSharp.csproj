@@ -48,6 +48,7 @@
     <Compile Include="CheckIfItIsAStraightLine.cs" />
     <Compile Include="ConstructBinarySearchTreeFromPreorderTraversal.cs" />
     <Compile Include="ContiguousArray.cs" />
+    <Compile Include="CourseSchedule.cs" />
     <Compile Include="CousinsInBinaryTree.cs" />
     <Compile Include="FindAllAnagramsInAString.cs" />
     <Compile Include="FindTheTownJudge.cs" />
