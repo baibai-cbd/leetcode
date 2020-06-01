@@ -50,6 +50,7 @@
     <Compile Include="ContiguousArray.cs" />
     <Compile Include="CourseSchedule.cs" />
     <Compile Include="CousinsInBinaryTree.cs" />
+    <Compile Include="EditDistance.cs" />
     <Compile Include="FindAllAnagramsInAString.cs" />
     <Compile Include="FindTheTownJudge.cs" />
     <Compile Include="FirstBadVersion.cs" />
