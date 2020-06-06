@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BestTimeToBuyAndSellStockII.cs" />
+    <Compile Include="BinarySearchWithNotFoundReturnValue.cs" />
     <Compile Include="CheckIfItIsAStraightLine.cs" />
     <Compile Include="ConstructBinarySearchTreeFromPreorderTraversal.cs" />
     <Compile Include="ContiguousArray.cs" />
