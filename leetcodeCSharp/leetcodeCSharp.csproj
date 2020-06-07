@@ -76,6 +76,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueueReconstructionByHeight.cs" />
+    <Compile Include="RandomPickWithWeight.cs" />
     <Compile Include="ReverseString.cs" />
     <Compile Include="SingleElementInASortedArray.cs" />
     <Compile Include="TwoCityScheduling.cs" />
