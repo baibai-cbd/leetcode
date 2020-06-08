@@ -47,6 +47,7 @@
     <Compile Include="BestTimeToBuyAndSellStockII.cs" />
     <Compile Include="BinarySearchWithNotFoundReturnValue.cs" />
     <Compile Include="CheckIfItIsAStraightLine.cs" />
+    <Compile Include="CoinChange2.cs" />
     <Compile Include="ConstructBinarySearchTreeFromPreorderTraversal.cs" />
     <Compile Include="ContiguousArray.cs" />
     <Compile Include="CourseSchedule.cs" />
