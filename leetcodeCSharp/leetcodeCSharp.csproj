@@ -73,6 +73,7 @@
     <Compile Include="OnlineStockSpan.cs" />
     <Compile Include="PalindromeNumber.cs" />
     <Compile Include="PermutationInString.cs" />
+    <Compile Include="PowerOfTwo.cs" />
     <Compile Include="ProductExceptSelf.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
