@@ -80,6 +80,7 @@
     <Compile Include="QueueReconstructionByHeight.cs" />
     <Compile Include="RandomPickWithWeight.cs" />
     <Compile Include="ReverseString.cs" />
+    <Compile Include="SearchInsertPosition.cs" />
     <Compile Include="SingleElementInASortedArray.cs" />
     <Compile Include="TwoCityScheduling.cs" />
     <Compile Include="UncrossedLines.cs" />
