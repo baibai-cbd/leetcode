@@ -62,6 +62,7 @@
     <Compile Include="GroupAnagrams.cs" />
     <Compile Include="HappyNumber.cs" />
     <Compile Include="ImplementTrie.cs" />
+    <Compile Include="InsertDeleteGetRandom.cs" />
     <Compile Include="IntervalListIntersections.cs" />
     <Compile Include="InvertBinaryTree.cs" />
     <Compile Include="LastStoneWeight.cs" />
