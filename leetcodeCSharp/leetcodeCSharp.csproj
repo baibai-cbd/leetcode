@@ -65,6 +65,7 @@
     <Compile Include="InsertDeleteGetRandom.cs" />
     <Compile Include="IntervalListIntersections.cs" />
     <Compile Include="InvertBinaryTree.cs" />
+    <Compile Include="LargestDivisibleSubset.cs" />
     <Compile Include="LastStoneWeight.cs" />
     <Compile Include="MajorityElement.cs" />
     <Compile Include="MaximumSubarray.cs" />
