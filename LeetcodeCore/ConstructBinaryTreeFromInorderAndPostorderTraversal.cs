@@ -15,14 +15,29 @@ namespace LeetcodeCore
             {
                 return null;
             }
-            var root = new TreeNode(postorder[postorder.Length - 1]);
-            if (inorder.Length == 1)
+
+            var root = BuildTreeHelper(inorder, postorder, 0, inorder.Length - 1, 0, postorder.Length - 1);
+
+            return root;
+        }
+
+        private TreeNode BuildTreeHelper(int[] inorder, int[] postorder, int inorderIndex0, int inorderIndex1, int postorderIndex0, int postorderIndex1)
+        {
+            var root = new TreeNode(postorder[postorderIndex1]);
+            if (inorderIndex0 == inorderIndex1)
                 return root;
 
-            var leftCount = Array.IndexOf(inorder, root.val);
-            var rightCount = inorder.Length - leftCount - 1;
-            root.left = BuildTree(inorder.Take(leftCount).ToArray(), postorder.Take(leftCount).ToArray());
-            root.right = BuildTree(inorder.Skip(leftCount + 1).Take(rightCount).ToArray(), postorder.Skip(leftCount).Take(rightCount).ToArray());
+            var rootIndex = Array.IndexOf(inorder, root.val);
+            var leftCount = rootIndex - inorderIndex0;
+            var rightCount = inorderIndex1 - rootIndex;
+            if (leftCount > 0)
+            {
+                root.left = BuildTreeHelper(inorder, postorder, inorderIndex0, rootIndex - 1, postorderIndex0, postorderIndex1 - 1 - rightCount);
+            }
+            if (rightCount > 0)
+            {
+                root.right = BuildTreeHelper(inorder, postorder, rootIndex + 1, inorderIndex1, postorderIndex0 + leftCount, postorderIndex1 - 1);
+            }
 
             return root;
         }
