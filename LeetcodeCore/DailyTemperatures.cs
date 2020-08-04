@@ -15,7 +15,7 @@ namespace LeetcodeCore
             var results = new int[T.Length];
             results[T.Length - 1] = 0;
             var stack = new Stack<Tuple<int, int>>();
-            stack.Push(new Tuple<int, int>(T[^1], 1));
+            stack.Push(new Tuple<int, int>(T[^1], 1)); // index operator, count 1 from end
 
             for (int i = T.Length-2; i >= 0; i--)
             {

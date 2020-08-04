@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace LeetcodeCore
 {
@@ -9,13 +10,14 @@ namespace LeetcodeCore
             Console.WriteLine("Hello World!");
             //
             // TODO: Test code can be here
-            var inorder = new int[] { 9, 3, 15, 20, 7 };
-            var postorder = new int[] { 9, 15, 7, 20, 3 };
+            var nums = new int[] { 73, 74, 75, 71, 69, 72, 76, 73 };
 
-
-            var testClass = new ConstructBinaryTreeFromInorderAndPostorderTraversal();
-            var result = testClass.BuildTree(inorder, postorder);
-            Console.WriteLine(result);
+            var testClass = new DailyTemperaturesSolution();
+            var result = testClass.DailyTemperatures(nums);
+            foreach (var item in result)
+            {
+                Console.Write($"-{item}-");
+            }
             //
             Console.ReadKey();
         }
