@@ -8,6 +8,7 @@ namespace LeetcodeCore
     {
         // 146. LRU Cache
         // TODO: work on O(1) solution next time
+        // TODO: try thread-safe implementation next time
         private readonly int _capacity;
         private readonly LinkedList<int> _linkedList;
         private readonly Dictionary<int, int> _valueDict;
