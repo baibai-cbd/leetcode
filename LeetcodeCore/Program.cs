@@ -10,14 +10,12 @@ namespace LeetcodeCore
             Console.WriteLine("Hello World!");
             //
             // TODO: Test code can be here
-            var nums = new int[] { 73, 74, 75, 71, 69, 72, 76, 73 };
+            var nums = new int[] { 3, 2, 1, 4 };
 
-            var testClass = new DailyTemperaturesSolution();
-            var result = testClass.DailyTemperatures(nums);
-            foreach (var item in result)
-            {
-                Console.Write($"-{item}-");
-            }
+            var testClass = new TrappingRainWater();
+            var result = testClass.Trap(nums);
+            
+            Console.WriteLine($"-{result}-");
             //
             Console.ReadKey();
         }
