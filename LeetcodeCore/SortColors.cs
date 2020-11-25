@@ -35,6 +35,30 @@ namespace LeetcodeCore
             }
         }
 
-        // TODO: One pass method
+        // One pass method
+        public void SortColors2(int[] nums)
+        {
+            var head = 0;
+            var tail = nums.Length - 1;
+            var currIndex = 0;
+
+            while (currIndex <= tail)
+            {
+                if (nums[currIndex] == 0)
+                {
+                    nums[currIndex] = nums[head];
+                    nums[head] = 0;
+                    head++;
+                }
+                if (nums[currIndex] == 2)
+                {
+                    nums[currIndex] = nums[tail];
+                    nums[tail] = 2;
+                    tail--;
+                    currIndex--;
+                }
+                currIndex++;
+            }
+        }
     }
 }
