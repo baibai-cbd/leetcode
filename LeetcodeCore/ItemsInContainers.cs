@@ -11,7 +11,7 @@ namespace LeetcodeCore
             int[] results = new int[startIndices.Length];
             var dict = new Dictionary<Tuple<int,int>, int>();
             var splittedArr = s.Split('|');
-            var currIndex = splittedArr[0].Length;
+            var currIndex = splittedArr[0].Length + 1;  // add 1 to make indexes starting at 1, consistent with inputs
 
             for (int i = 1; i < splittedArr.Length - 1; i++) // don't count in the first/last unclosed intervals, hence starting at 1 and ending with -1
             {
@@ -25,7 +25,7 @@ namespace LeetcodeCore
                 var sum = 0;
                 foreach (var kvp in dict)
                 {
-                    if (kvp.Key.Item1 >= startIndices[i] - 1 && kvp.Key.Item2 <= endIndices[i] - 1) // only fully enclosed intervals are counted
+                    if (kvp.Key.Item1 >= startIndices[i] && kvp.Key.Item2 <= endIndices[i]) // only fully enclosed intervals are counted
                     {
                         sum += kvp.Value;
                     }
