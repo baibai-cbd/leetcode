@@ -26,7 +26,7 @@ namespace LeetcodeCore
                     dict[arr[0]]--;
             }
 
-            var resultArr = dict.Where(kv => kv.Value >= threshold).Select(kv => kv.Key).OrderBy(s => s).ToArray();
+            var resultArr = dict.Where(kv => kv.Value >= threshold).Select(kv => kv.Key).OrderBy(s => int.Parse(s)).ToArray();
             return resultArr;
         }
     }
