@@ -7,6 +7,7 @@ namespace LeetcodeCore
     public class TrappingRainWater
     {
         // 42. Trapping Rain Water
+        // TODO: Try the left max, right max way
         public int Trap(int[] height)
         {
             if (height == null || height.Length <= 2)

@@ -29,7 +29,7 @@ namespace LeetcodeCore
             }
             foreach (var key in adjLists.Keys)
             {
-                adjLists[key].Sort();
+                adjLists[key].Sort(); // sort here can ensure least lexicographic result will be produced
             }
             //
             var startVertex = "JFK";
