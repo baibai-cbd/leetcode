@@ -14,17 +14,20 @@ namespace LeetcodeCore
 
             Array.Sort(intervals, new MyComparer());
             int end = intervals[0][1];
-            int count = 1;
+            int count = 0;
 
             for (int i = 1; i < intervals.Length; i++)
             {
-                if (intervals[i][0] >= end)
+                if (intervals[i][0] < end)
                 {
-                    end = intervals[i][1];
                     count++;
                 }
+                else
+                {
+                    end = intervals[i][1];
+                }
             }
-            return intervals.Length - count;
+            return count;
         }
 
         public class MyComparer : IComparer<int[]>
