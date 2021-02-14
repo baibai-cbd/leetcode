@@ -48,7 +48,7 @@ namespace LeetcodeCore
                         continue;
                     }
 
-                    // one move can change absolute distance at most by 3, thus 1 move away from the best move means it can be skipped
+                    // one move can change absolute distance at most by 3, thus 1 move away from the best move means it can be ruled out
                     if (AbsDistance(x, y, currPoint.Item1, currPoint.Item2) - AbsDistance(x, y, bestMove.Item1, bestMove.Item2) >= 3)
                         continue;
 
