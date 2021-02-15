@@ -102,5 +102,51 @@ namespace LeetcodeCore
 
             return dummy.next;
         }
+
+
+
+        // Merge K Lists with PriorityQueue
+        public ListNode MergeKListsWithPQ(ListNode[] lists)
+        {
+            if (lists == null || lists.Length == 0)
+                return null;
+
+            // Beware of using SortedSet in absense of PQ, because SortedSet doesn't support duplicate entry,
+            // need to add a index to form a Tuple to use, and PUT THE INDEX IN COMPARISON as well to avoid equal comparison result
+            var priorityQueue = new SortedSet<Tuple<int, ListNode>>(Comparer<Tuple<int, ListNode>>.Create(
+                (a, b) => { if (a.Item2.val.CompareTo(b.Item2.val) != 0) return a.Item2.val.CompareTo(b.Item2.val); else return a.Item1.CompareTo(b.Item1); }));
+
+            for (int i = 0; i < lists.Length; i++)
+            {
+                if (lists[i] != null)
+                {
+                    priorityQueue.Add(new Tuple<int, ListNode>(i, lists[i]));
+                    var temp = lists[i].next;
+                    lists[i].next = null;
+                    lists[i] = temp;
+                }
+            }
+            var dummy = new ListNode(0);
+            var currHead = dummy;
+
+            while (priorityQueue.Count > 0)
+            {
+                var currNode = priorityQueue.Min;
+                var index = currNode.Item1;
+                priorityQueue.Remove(currNode);
+                if (lists[index] != null)
+                {
+                    priorityQueue.Add(new Tuple<int, ListNode>(index, lists[index]));
+                    var temp = lists[index].next;
+                    lists[index].next = null;
+                    lists[index] = temp;
+                }
+
+                currHead.next = currNode.Item2;
+                currHead = currHead.next;
+            }
+
+            return dummy.next;
+        }
     }
 }
