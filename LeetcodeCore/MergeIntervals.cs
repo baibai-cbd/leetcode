@@ -7,6 +7,7 @@ namespace LeetcodeCore
     public class MergeIntervals
     {
         // 56. Merge Intervals
+        // TODO: stack is actually not necessary, try get rid of it next time
         public int[][] Merge(int[][] intervals)
         {
             var stack = new Stack<Tuple<int, int>>();
@@ -24,6 +25,8 @@ namespace LeetcodeCore
                 if (a.Item1.CompareTo(b.Item1) != 0)
                     return a.Item1.CompareTo(b.Item1);
                 else
+                    // this is important because this problem treats same end start point as continuous, i.e [1,3] [3,6] -> [1,6]
+                    // so we want start point of second interval appear before the end of first interval after sorting
                     return a.Item2.CompareTo(b.Item2);
             }));
 
