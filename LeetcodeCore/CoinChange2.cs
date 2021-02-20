@@ -18,8 +18,12 @@ namespace LeetcodeCore
             if (amount == 0)
                 return 1;
 
-            dp = new int[coins.Length, amount+1];
-            return ChangeRecursive(amount, coins, 0);
+            var usefulCoins = coins.Where(c => c <= amount).ToArray();
+
+            // this dpArr meaning is very tricky,
+            // it's the number of combination of coins to build up current amount by using the current or later index coins(but not previous)
+            dp = new int[usefulCoins.Length, amount+1];
+            return ChangeRecursive(amount, usefulCoins, 0);
         }
 
         private int ChangeRecursive(int amount, int[] coins, int index)
