@@ -54,5 +54,48 @@ namespace LeetcodeCore
             var result = listOfLists[nums.Length - 1].Count(x => x == S);
             return result;
         }
+
+
+        // Good solution by converting it to a Knapsack problem(DP)
+        public int FindTargetSumWays3(int[] nums, int S)
+        {
+            if (nums == null || nums.Length == 0)
+                return 0;
+
+            int n = nums.Length;
+            int sum = 0;
+            for (int i = 0; i < n; i++)
+            {
+                sum += nums[i];
+            }
+            if (sum < S || (sum + S) % 2 == 1)
+            {
+                return 0;
+            }
+            // How does this problem converts to Knapsack problem?
+            // if we split the nums into 2 sets A and B, then we have sum(A) + S = sum(B)
+            // since sum(A) is int, S is int, sum(A) + S + sum(B) must be even
+            // Thus we can use sum(A union B) / 2 as target number
+            int W = (sum + S) / 2;
+            var dpArr = new int[nums.Length + 1, W + 1];
+            dpArr[0, 0] = 1;
+
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = W; j >= 0; j--)
+                {
+                    if (j >= nums[i])
+                    {
+                        dpArr[i + 1, j] = dpArr[i, j] + dpArr[i, j - nums[i]];
+                    }
+                    else
+                    {
+                        dpArr[i + 1, j] = dpArr[i, j];
+                    }
+                }
+            }
+
+            return dpArr[n, W];
+        }
     }
 }
