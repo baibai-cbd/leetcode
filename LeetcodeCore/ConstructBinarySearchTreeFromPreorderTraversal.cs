@@ -40,5 +40,42 @@ namespace LeetcodeCore
             }
             return root;
         }
+
+
+        // Without extra space
+        public TreeNode BstFromPreorder1(int[] preorder)
+        {
+            if (preorder.Length == 0)
+                return null;
+
+            return BstFromPreorderWithIndex(preorder, 0, preorder.Length - 1);
+        }
+
+        private TreeNode BstFromPreorderWithIndex(int[] preorder, int start, int end)
+        {
+            var root = new TreeNode(preorder[start]);
+            if (start == end)
+                return root;
+
+            int i = start + 1;
+            while (i <= end && preorder[i] < root.val)
+            {
+                i++;
+            }
+
+            var leftLength = i - 1 - start;
+            var rightLength = end + 1 - i;
+
+            if (leftLength != 0)
+            {
+                root.left = BstFromPreorderWithIndex(preorder, start + 1, start + leftLength);
+            }
+            if (rightLength != 0)
+            {
+                root.right = BstFromPreorderWithIndex(preorder, end - rightLength + 1, end);
+            }
+
+            return root;
+        }
     }
 }
