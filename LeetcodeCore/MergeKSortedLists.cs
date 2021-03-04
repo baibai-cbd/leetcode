@@ -121,9 +121,7 @@ namespace LeetcodeCore
                 if (lists[i] != null)
                 {
                     priorityQueue.Add(new Tuple<int, ListNode>(i, lists[i]));
-                    var temp = lists[i].next;
-                    lists[i].next = null;
-                    lists[i] = temp;
+                    lists[i] = lists[i].next;
                 }
             }
             var dummy = new ListNode(0);
@@ -137,9 +135,7 @@ namespace LeetcodeCore
                 if (lists[index] != null)
                 {
                     priorityQueue.Add(new Tuple<int, ListNode>(index, lists[index]));
-                    var temp = lists[index].next;
-                    lists[index].next = null;
-                    lists[index] = temp;
+                    lists[index] = lists[index].next;
                 }
 
                 currHead.next = currNode.Item2;
