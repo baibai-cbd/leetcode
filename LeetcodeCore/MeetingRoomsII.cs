@@ -118,5 +118,27 @@ namespace LeetcodeCore
         //
         //    return k;
         //}
+
+        // Solution 5
+        // Using my own PriorityQueue implementation
+        public int MinMeetingRooms5(int[][] intervals)
+        {
+            if (intervals == null || intervals.Length == 0)
+                return 0;
+
+            Array.Sort(intervals, Comparer<int[]>.Create((a, b) => a[0].CompareTo(b[0])));
+
+            var pq = new PriorityQueue<int[]>(Comparer<int[]>.Create((a, b) => a[1].CompareTo(b[1])));
+            pq.Push(intervals[0]);
+            for (int i = 1; i < intervals.Length; i++)
+            {
+                if (intervals[i][0] >= pq.Peek()[1])
+                    pq.Pop();
+
+                pq.Push(intervals[i]);
+            }
+
+            return pq.Count;
+        }
     }
 }
