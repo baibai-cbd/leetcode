@@ -54,5 +54,35 @@ namespace LeetcodeCore
 
             return result;
         }
+
+
+        // Solution 2
+        // Scan from the left, right to get Min() of the 2 values
+        public int Trap2(int[] height)
+        {
+            var left = new int[height.Length];
+            var right = new int[height.Length];
+            var currBound = 0;
+
+            for (int i = 0; i < height.Length; i++)
+            {
+                currBound = Math.Max(currBound, height[i]);
+                left[i] = currBound;
+            }
+
+            currBound = 0;
+            for (int j = height.Length - 1; j >= 0; j--)
+            {
+                currBound = Math.Max(currBound, height[j]);
+                right[j] = currBound;
+            }
+
+            var sum = 0;
+            for (int k = 0; k < height.Length; k++)
+            {
+                sum += Math.Min(left[k], right[k]) - height[k];
+            }
+            return sum;
+        }
     }
 }
