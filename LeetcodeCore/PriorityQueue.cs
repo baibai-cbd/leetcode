@@ -31,10 +31,15 @@ namespace LeetcodeCore
             var newIndex = _list.Count;
             _list.Add(value);
 
-            while (newIndex > 1 && _comparer.Compare(_list[newIndex], _list[newIndex/2]) < 0)
+            Swim(newIndex);
+        }
+
+        private void Swim(int index)
+        {
+            while (index > 1 && _comparer.Compare(_list[index], _list[index / 2]) < 0)
             {
-                Swap(newIndex / 2, newIndex);
-                newIndex /= 2;
+                Swap(index / 2, index);
+                index /= 2;
             }
         }
 
