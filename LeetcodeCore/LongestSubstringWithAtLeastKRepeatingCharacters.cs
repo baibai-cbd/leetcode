@@ -63,5 +63,33 @@ namespace LeetcodeCore
             }
             return max;
         }
+
+
+        // Divide and Conquer solution(roughly)
+        public int LongestSubstring2(string s, int k)
+        {
+            return DivideConquerHelper(s, 0, s.Length - 1, k);
+        }
+
+        private int DivideConquerHelper(string s, int start, int end, int k)
+        {
+            if (end - start + 1 < k)
+                return 0;
+
+            var count = new int[26];
+            for (int i = start; i <= end; i++)
+                count[s[i] - 'a']++;
+
+            for (int j = start; j <= end; j++)
+            {
+                if (count[s[j] - 'a'] < k)
+                {
+                    var left = DivideConquerHelper(s, start, j - 1, k); // mind the boundary index
+                    var right = DivideConquerHelper(s, j + 1, end, k);
+                    return Math.Max(left, right);
+                }
+            }
+            return end - start + 1;
+        }
     }
 }
