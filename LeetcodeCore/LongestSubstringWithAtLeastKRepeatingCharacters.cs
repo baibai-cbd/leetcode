@@ -8,7 +8,6 @@ namespace LeetcodeCore
     public class LongestSubstringWithAtLeastKRepeatingCharacters
     {
         // 395. Longest Substring with At Least K Repeating Characters
-        // TODO: Try divide&conquer recursive solution next time
         public int LongestSubstring(string s, int k)
         {
             if (k > s.Length)
