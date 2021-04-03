@@ -7,37 +7,31 @@ namespace LeetcodeCore
     public class CountGoodNodesInBinaryTree
     {
         // 1448. Count Good Nodes in Binary Tree
+        // max at different levels of the call stack implicitly keep records of the current max value
         public int GoodNodes(TreeNode root)
         {
-            var stack = new Stack<TreeNode>();
-            var count = 0;
-
-            if (root != null)
-                stack.Push(new TreeNode(root.val - 1));
-            else
+            if (root == null)
                 return 0;
 
-            RecursiveCall(root, stack, ref count);
+            var count = 0;
+            RecursiveCall(root, root.val - 1, ref count);
 
             return count;
         }
 
-        private void RecursiveCall(TreeNode root, Stack<TreeNode> stack, ref int count)
+        private void RecursiveCall(TreeNode root, int max, ref int count)
         {
             if (root == null)
                 return;
 
-            if (root.val >= stack.Peek().val)
+            if (root.val >= max)
             {
-                stack.Push(root);
+                max = root.val;
                 count++;
             }
 
-            RecursiveCall(root.left, stack, ref count);
-            RecursiveCall(root.right, stack, ref count);
-
-            if (root.val == stack.Peek().val)
-                stack.Pop();
+            RecursiveCall(root.left, max, ref count);
+            RecursiveCall(root.right, max, ref count);
         }
     }
 }
