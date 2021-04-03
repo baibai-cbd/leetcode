@@ -40,5 +40,50 @@ namespace LeetcodeCore
 
             return count;
         }
+
+
+        // DFS solution
+        // slightly better than BFS
+        HashSet<int>[] fromLists;
+        HashSet<int>[] toLists;
+
+        public int MinReorder2(int n, int[][] connections)
+        {
+            var count = 0;
+            fromLists = new HashSet<int>[n];
+            toLists = new HashSet<int>[n];
+            foreach (var item in connections)
+            {
+                if (fromLists[item[1]] == null) fromLists[item[1]] = new HashSet<int>();
+                fromLists[item[1]].Add(item[0]);
+                if (toLists[item[0]] == null) toLists[item[0]] = new HashSet<int>();
+                toLists[item[0]].Add(item[1]);
+            }
+
+            DFS(0, ref count);
+
+            return count;
+        }
+
+        private void DFS(int v, ref int count)
+        {
+            if (toLists[v] != null)
+            {
+                foreach (var node in toLists[v])
+                {
+                    count++;
+                    fromLists[node].Remove(v);
+                    DFS(node, ref count);
+                }
+            }
+            if (fromLists[v] != null)
+            {
+                foreach (var node in fromLists[v])
+                {
+                    toLists[node].Remove(v);
+                    DFS(node, ref count);
+                }
+            }
+        }
     }
 }
