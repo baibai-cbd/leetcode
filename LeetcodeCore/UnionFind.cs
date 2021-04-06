@@ -36,6 +36,15 @@ namespace LeetcodeCore
             return p;
         }
 
+        public int FindSize(int p)
+        {
+            while (p != id[p])
+            {
+                p = id[p];
+            }
+            return size[p];
+        }
+
         public void Union(int p, int q)
         {
             int i = Find(p);
