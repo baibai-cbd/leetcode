@@ -7,8 +7,8 @@ namespace LeetcodeCore
     // My own implementation of PriorityQueue with generic capability
     public class PriorityQueue<T>
     {
-        private IList<T> _list;
-        private IComparer<T> _comparer;
+        private readonly IList<T> _list;
+        private readonly IComparer<T> _comparer;
 
         public PriorityQueue()
         {

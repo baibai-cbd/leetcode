@@ -144,5 +144,40 @@ namespace LeetcodeCore
 
             return dummy.next;
         }
+
+
+        // Merge K Lists with my own PriorityQueue
+        public ListNode MergeKListsWithPQ2(ListNode[] lists)
+        {
+            if (lists == null || lists.Length == 0)
+                return null;
+
+            var priorityQueue = new PriorityQueue<ListNode>(Comparer<ListNode>.Create((a, b) => a.val.CompareTo(b.val)));
+
+            for (int i = 0; i < lists.Length; i++)
+            {
+                if (lists[i] != null)
+                    priorityQueue.Push(lists[i]);
+            }
+
+            var dummy = new ListNode(0);
+            var currHead = dummy;
+
+            while (priorityQueue.Count > 0)
+            {
+                var currNode = priorityQueue.Pop();
+                currHead.next = currNode;
+                currHead = currHead.next;
+
+                if (currNode.next != null)
+                {
+                    var nextNode = currNode.next;
+                    currNode.next = null;
+                    priorityQueue.Push(nextNode);
+                }
+            }
+
+            return dummy.next;
+        }
     }
 }
