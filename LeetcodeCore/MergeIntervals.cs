@@ -7,10 +7,8 @@ namespace LeetcodeCore
     public class MergeIntervals
     {
         // 56. Merge Intervals
-        // TODO: stack is actually not necessary, try get rid of it next time
         public int[][] Merge(int[][] intervals)
         {
-            var stack = new Stack<Tuple<int, int>>();
             var list = new List<Tuple<int, int>>();
             var resultList = new List<int[]>();
 
@@ -31,19 +29,19 @@ namespace LeetcodeCore
             }));
 
             var addminusFlag = 0;
+            var start = 0;
+            var end = 0;
             for (int i = 0; i < list.Count; i++)
             {
+                if (addminusFlag == 0)
+                    start = list[i].Item1;
+
                 addminusFlag += 1 - list[i].Item2;
-                stack.Push(list[i]);
 
-                if (addminusFlag == 0 && stack.Count > 0)
+                if (addminusFlag == 0)
                 {
-                    var end = stack.Peek();
-                    var start = stack.Peek();
-                    while (stack.Count > 0)
-                        start = stack.Pop();
-
-                    resultList.Add(new int[] { start.Item1, end.Item1 });
+                    end = list[i].Item1;
+                    resultList.Add(new int[] { start, end });
                 }
             }
 
