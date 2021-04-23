@@ -7,6 +7,7 @@ namespace LeetcodeCore
     public class SpiralMatrix
     {
         // 54. Spiral Matrix
+        // This solution has O(1) extra space
         public IList<int> SpiralOrder(int[][] matrix)
         {
             var results = new List<int>();
@@ -80,6 +81,69 @@ namespace LeetcodeCore
                     return newPositions;
                 default:
                     return null;
+            }
+        }
+
+
+        // Easy to understand solution, but with O(n) extra space
+        public IList<int> SpiralOrder2(int[][] matrix)
+        {
+            var result = new List<int>();
+            var visited = new HashSet<(int, int)>();
+            var direction = 1;
+            var moveStep = (0, 1);
+            var m = matrix.Length;
+            var n = matrix[0].Length;
+            var i = 0;
+            var j = 0;
+
+            while (true)
+            {
+                visited.Add((i, j));
+                result.Add(matrix[i][j]);
+
+                if (visited.Count == m * n)
+                    break;
+
+                var nextI = i + moveStep.Item1;
+                var nextJ = j + moveStep.Item2;
+                if ((nextI < 0 || nextI == m || nextJ < 0 || nextJ == n) || visited.Contains((i + moveStep.Item1, j + moveStep.Item2)))
+                {
+                    moveStep = MakeTurn(ref direction);
+                    i = i + moveStep.Item1;
+                    j = j + moveStep.Item2;
+                }
+                else
+                {
+                    i = nextI;
+                    j = nextJ;
+                }
+            }
+
+            return result;
+        }
+
+        private (int, int) MakeTurn(ref int direction)
+        {
+            if (direction == 1)
+            {
+                direction = 2;
+                return (1, 0);
+            }
+            else if (direction == 2)
+            {
+                direction = 3;
+                return (0, -1);
+            }
+            else if (direction == 3)
+            {
+                direction = 4;
+                return (-1, 0);
+            }
+            else
+            {
+                direction = 1;
+                return (0, 1);
             }
         }
     }
