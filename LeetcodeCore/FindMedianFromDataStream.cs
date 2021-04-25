@@ -48,4 +48,44 @@ namespace LeetcodeCore
             return _data.Count % 2 == 0;
         }
     }
+
+
+    public class MedianFinder2
+    {
+        // This solution uses 2 PriorityQueue with opposite sort order,
+        // ensures the median is between the Min of the larger queue and the Max of the smaller queue
+        private readonly PriorityQueue<int> _smallQueue;
+        private readonly PriorityQueue<int> _largeQueue;
+        private bool _even;
+
+        public MedianFinder2()
+        {
+            _even = true;
+            _smallQueue = new PriorityQueue<int>(Comparer<int>.Create((a, b) => b.CompareTo(a)));
+            _largeQueue = new PriorityQueue<int>();
+        }
+
+        public void AddNum(int num)
+        {
+            if (_even)
+            {
+                _largeQueue.Push(num);
+                var temp = _largeQueue.Pop();
+                _smallQueue.Push(temp);
+                _even = !_even;
+            }
+            else
+            {
+                _smallQueue.Push(num);
+                var temp = _smallQueue.Pop();
+                _largeQueue.Push(temp);
+                _even = !_even;
+            }
+        }
+
+        public double FindMedian()
+        {
+            return _even ? (_smallQueue.Peek() + _largeQueue.Peek()) / (double)2 : (double) _smallQueue.Peek();
+        }
+    }
 }
