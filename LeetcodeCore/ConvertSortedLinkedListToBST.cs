@@ -32,5 +32,46 @@ namespace LeetcodeCore
             treeNode1.right = postMid == null ? null : SortedListToBST(postMid);
             return treeNode1;
         }
+
+
+        // solution without break up linked list
+        // code is a bit complicated
+        public TreeNode SortedListToBST2(ListNode head)
+        {
+            if (head == null)
+                return null;
+            if (head.next == null)
+                return new TreeNode(head.val);
+
+            return RecursiveHelper(head, null);
+        }
+
+        private TreeNode RecursiveHelper(ListNode head, ListNode tail)
+        {
+            if (head == tail)
+                return null;
+            if (head.next == tail)
+                return new TreeNode(head.val);
+            if (head.next.next == tail)
+            {
+                var tempRoot = new TreeNode(head.val);
+                tempRoot.right = new TreeNode(head.next.val);
+                return tempRoot;
+            }
+
+            var fast = head;
+            var slow = head;
+
+            while (fast.next != tail && fast.next.next != tail)
+            {
+                fast = fast.next.next;
+                slow = slow.next;
+            }
+
+            var root = new TreeNode(slow.val);
+            root.left = RecursiveHelper(head, slow);
+            root.right = RecursiveHelper(slow.next, tail);
+            return root;
+        }
     }
 }
