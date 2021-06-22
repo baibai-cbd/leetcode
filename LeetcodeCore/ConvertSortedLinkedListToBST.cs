@@ -52,12 +52,6 @@ namespace LeetcodeCore
                 return null;
             if (head.next == tail)
                 return new TreeNode(head.val);
-            if (head.next.next == tail)
-            {
-                var tempRoot = new TreeNode(head.val);
-                tempRoot.right = new TreeNode(head.next.val);
-                return tempRoot;
-            }
 
             var fast = head;
             var slow = head;
