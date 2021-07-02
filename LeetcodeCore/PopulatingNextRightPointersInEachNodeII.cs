@@ -7,6 +7,8 @@ namespace LeetcodeCore
     public class PopulatingNextRightPointersInEachNodeII
     {
         // 117. Populating Next Right Pointers in Each Node II
+
+        // solution 1 with queue, O(n) extra space
         public Node Connect(Node root)
         {
             if (root == null) 
@@ -36,6 +38,42 @@ namespace LeetcodeCore
 
             return root;
         }
+
+
+        // solution 2 with recursion, no extra space(not counting call stack space)
+        public Node Connect2(Node root)
+        {
+            ConnectNext(root, null);
+            return root;
+        }
+
+        private void ConnectNext(Node root, Node next)
+        {
+            if (root == null)
+                return;
+
+            root.next = next;
+
+            Node rnext = FindNext(null, next);
+            ConnectNext(root.right, rnext);
+
+            Node lnext = FindNext(root.right, next);
+            ConnectNext(root.left, lnext);
+        }
+
+        private Node FindNext(Node start, Node parentLevel)
+        {
+            while (start == null && parentLevel != null)
+            {
+                start = parentLevel.left ?? parentLevel.right ?? null;
+                if (start != null)
+                    break;
+                else
+                    parentLevel = parentLevel.next;
+            }
+            return start;
+        }
+
 
         public class Node
         {
