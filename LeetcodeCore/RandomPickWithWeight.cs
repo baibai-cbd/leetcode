@@ -31,4 +31,36 @@ namespace LeetcodeCore
             return Math.Abs(Array.BinarySearch(probs, rand.NextDouble())) - 1;
         }
     }
+
+    // solution with usage of int only
+    public class RandomPickWithWeight2
+    {
+
+        public int[] _aggr;
+        public int _sum;
+        public Random _rand;
+
+        public RandomPickWithWeight2(int[] w)
+        {
+            _sum = 0;
+            _aggr = new int[w.Length];
+            _rand = new Random();
+            for (int i = 0; i < w.Length; i++)
+            {
+                _sum += w[i];
+                _aggr[i] = _sum;
+            }
+        }
+
+        public int PickIndex()
+        {
+            var randInt = _rand.Next(1, _sum + 1);
+
+            var index = Array.BinarySearch(_aggr, randInt);
+            if (index >= 0)
+                return index;
+            else
+                return (index + 1) * -1;
+        }
+    }
 }
