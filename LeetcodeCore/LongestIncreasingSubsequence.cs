@@ -34,5 +34,34 @@ namespace LeetcodeCore
 
             return maxLength;
         }
+
+
+        // O(nLogn) time complexity solution
+        // Brilliant idea to construct a temp LIS on the go,
+        // substitute with later smaller elements if possible, thus allowing more elements into the temp LIS, forming the longest LIS eventually
+        public int LengthOfLIS2(int[] nums)
+        {
+
+            if (nums.Length == 1)
+                return 1;
+
+            var dpArr = new int[nums.Length];
+            var maxLength = 0;
+
+            foreach (var n in nums)
+            {
+                var index = Array.BinarySearch(dpArr, 0, maxLength, n);
+
+                if (index < 0)
+                    index = (index + 1) * -1;
+
+                dpArr[index] = n;
+
+                if (index == maxLength)
+                    maxLength++;
+            }
+
+            return maxLength;
+        }
     }
 }
