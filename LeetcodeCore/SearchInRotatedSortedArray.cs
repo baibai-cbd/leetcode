@@ -50,10 +50,37 @@ namespace LeetcodeCore
             return -1;
         }
 
-        private int RecursiveHalfBinarySearch(int[] nums, int left, int right, int target)
+
+        // Solution 2: Recursive, search both side of the mid
+        public int Search2(int[] nums, int target)
         {
-            // TODO:
-            return -1;
+            return SearchWithinRecursive(nums, target, 0, nums.Length - 1);
+        }
+
+        private int SearchWithinRecursive(int[] nums, int target, int low, int high)
+        {
+            if (low <= high)
+            {
+                var mid = (low + high) / 2;
+                if (nums[mid] == target)
+                {
+                    return mid;
+                }
+
+                var r1 = SearchWithinRecursive(nums, target, low, mid - 1);
+                var r2 = SearchWithinRecursive(nums, target, mid + 1, high);
+
+                if (r1 >= 0)
+                    return r1;
+                if (r2 >= 0)
+                    return r2;
+
+                return -1;
+            }
+            else
+            {
+                return -1;
+            }
         }
     }
 }
