@@ -36,5 +36,38 @@ namespace LeetcodeCore
             list.Add(root.val);
             InorderTraverse(root.right, list);
         }
+
+        // solution 2 with O(n) complexity
+        public bool IsValidBST2(TreeNode root)
+        {
+            bool validFlag = true;
+            int? num = null;
+
+            TraverseWithRef(root, ref num, ref validFlag);
+
+            return validFlag;
+        }
+
+        private void TraverseWithRef(TreeNode root, ref int? num, ref bool valid)
+        {
+            if (root == null)
+                return;
+
+            TraverseWithRef(root.left, ref num, ref valid);
+
+            if (!num.HasValue)
+            {
+                num = root.val;
+            }
+            else
+            {
+                if (root.val <= num)
+                    valid = false;
+                if (root.val > num)
+                    num = root.val;
+            }
+
+            TraverseWithRef(root.right, ref num, ref valid);
+        }
     }
 }
