@@ -12,3 +12,4 @@ packages/
 *.sln
 LeetcodeCore/bin/*
 LeetcodeCore/obj/*
+LeetcodeCore/.vs/*
